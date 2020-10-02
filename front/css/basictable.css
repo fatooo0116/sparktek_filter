@@ -1,0 +1,138 @@
+/*
+ * jQuery Basic Table
+ * Author: Jerry Low
+ */
+
+
+#table{     
+  border-spacing: 0px;     border: 1px solid #ccc; 
+  margin-bottom: 100px;;
+}
+#table thead tr th{
+  background-color: #0071cd;
+  color:#fff;
+  padding:5px 10px;
+}
+/* #table  tr{ background: #f1f1f1; } */
+#table tr:nth-child(odd){ background: #fff; }
+#table tr:nth-child(even){ background: #f1f1f1; }
+
+#table  td{
+  padding:10px 10px;  
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;;
+  color:#333;
+}
+#table  tr:last-child td{
+  border-bottom: 0px;
+}
+#table  td:last-child{
+  border-right: 0px;
+}
+
+table.bt thead,
+table.bt tbody th {
+  display: none;
+}
+
+table.bt tfoot th,
+table.bt tfoot td,
+table.bt tbody td {
+  border: none;
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+
+  /* IE 9 */
+  float: left\9;
+  width: 100%\9;
+}
+
+table.bt tfoot th::before,
+table.bt tfoot td::before,
+table.bt tbody td::before {
+  content: attr(data-th) ": ";
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  font-weight: bold;
+  width: 8em;
+}
+
+table.bt tfoot th.bt-hide,
+table.bt tfoot td.bt-hide,
+table.bt tbody td.bt-hide {
+  display: none;
+}
+
+table.bt tfoot th .bt-content,
+table.bt tfoot td .bt-content,
+table.bt tbody td .bt-content {
+  vertical-align: top;
+}
+
+.bt-wrapper.active {
+  max-height: 310px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table.bt.bt--no-header tfoot td::before,
+table.bt.bt--no-header tbody td::before {
+  display: none;
+}
+
+
+.flex_row{
+  display: flex;
+  align-items: center;
+}
+
+.flex_row a{
+  display: block;
+}
+.flex_row a img{ width:20px;}
+
+#aloha_search .search_btn{
+  background:#df504b;
+}
+#aloha_search .reset_btn{
+  background:#797979;
+}
+#aloha_search {
+  display: flex;;
+  width: 100%;;
+  justify-content: center;
+  margin-bottom: 10px;;
+}
+#aloha_search .js_search_item{ padding:0 10px; }
+
+.msg404{
+  font-size:20px;
+  text-align: center;
+  padding:20px;
+  color:#f0a839;;
+  margin-bottom: 30px;;
+}
+
+
+@media (max-width: 767px) { 
+  #aloha_search {flex-wrap: wrap;}
+  #aloha_search .js_search_item{
+    width:50%;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;;
+  }
+  #aloha_search .searchbox.js_search_item{
+    width:100%
+  }
+  #aloha_search .searchbox.js_search_item select{     
+    width: 100%;
+    margin-bottom: 10px;
+  } 
+}
